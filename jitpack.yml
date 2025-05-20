@@ -1,6 +1,6 @@
 jdk:
   - openjdk8
 before_install:
-  - yes | sdkmanager "cmake;4.0.2"
+  - yes | sdkmanager "cmake;3.31.5"
   - sdk install java 17.0.8-tem
   - sdk use java 17.0.8-tem
