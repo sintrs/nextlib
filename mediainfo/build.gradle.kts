@@ -25,7 +25,7 @@ android {
             abiFilters += listOf("x86", "x86_64", "armeabi-v7a", "arm64-v8a")
         }
 
-        ndkVersion = "28.1.13356709"
+        ndkVersion = "27.2.12479018"
     }
 
     compileOptions {
