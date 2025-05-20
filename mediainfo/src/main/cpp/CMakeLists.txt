@@ -3,7 +3,7 @@
 # For more examples on how to use CMake, see https://github.com/android/ndk-samples.
 
 # Sets the minimum CMake version required for this project.
-cmake_minimum_required(VERSION 4.0.2)
+cmake_minimum_required(VERSION 3.31.5)
 
 project("mediainfo")
 
