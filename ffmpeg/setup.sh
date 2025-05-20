@@ -3,7 +3,7 @@
 # Versions
 VPX_VERSION=1.14.1
 MBEDTLS_VERSION=3.5.1
-FFMPEG_VERSION=7.1.1
+FFMPEG_VERSION=7.0.2
 
 # Directories
 BASE_DIR=$(cd "$(dirname "$0")" && pwd)
