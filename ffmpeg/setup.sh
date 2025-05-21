@@ -2,8 +2,8 @@
 
 # Versions
 VPX_VERSION=1.14.1
-MBEDTLS_VERSION=3.5.1
-FFMPEG_VERSION=7.0.2
+MBEDTLS_VERSION=3.6.3.1
+FFMPEG_VERSION=7.1.1
 
 # Directories
 BASE_DIR=$(cd "$(dirname "$0")" && pwd)
@@ -35,7 +35,7 @@ esac
 
 # Build tools
 TOOLCHAIN_PREFIX="${ANDROID_NDK_HOME}/toolchains/llvm/prebuilt/${HOST_PLATFORM}"
-CMAKE_EXECUTABLE=${ANDROID_SDK_HOME}/cmake/3.22.1/bin/cmake
+CMAKE_EXECUTABLE=${ANDROID_SDK_HOME}/cmake/4.0.2/bin/cmake
 
 mkdir -p $SOURCES_DIR
 
