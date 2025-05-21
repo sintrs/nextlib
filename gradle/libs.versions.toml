@@ -1,5 +1,5 @@
 [versions]
-agp = "8.10.0"
+agp = "8.9.2"
 kotlin = "2.1.21"
 androidxMedia3 = "1.6.1"
 checkerQual = "3.49.3"
