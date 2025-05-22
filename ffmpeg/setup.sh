@@ -15,7 +15,7 @@ VPX_DIR=$SOURCES_DIR/libvpx-$VPX_VERSION
 MBEDTLS_DIR=$SOURCES_DIR/mbedtls-$MBEDTLS_VERSION
 
 # Configuration
-ANDROID_ABIS="x86 x86_64 armeabi-v7a arm64-v8a"
+ANDROID_ABIS="armeabi-v7a arm64-v8a"
 ANDROID_PLATFORM=21
 ENABLED_DECODERS="vorbis opus flac alac pcm_mulaw pcm_alaw mp3 amrnb amrwb aac ac3 eac3 dca mlp truehd h264 hevc mpeg2video mpegvideo libvpx_vp8 libvpx_vp9"
 JOBS=$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || sysctl -n hw.pysicalcpu || echo 4)
@@ -86,16 +86,6 @@ function buildLibVpx() {
     arm64-v8a)
       EXTRA_BUILD_FLAGS="--force-target=armv8-android-gcc"
       TOOLCHAIN=aarch64-linux-android21-
-      ;;
-    x86)
-      EXTRA_BUILD_FLAGS="--force-target=x86-android-gcc --disable-sse2 --disable-sse3 --disable-ssse3 --disable-sse4_1 --disable-avx --disable-avx2 --enable-pic"
-      VPX_AS=${TOOLCHAIN_PREFIX}/bin/yasm
-      TOOLCHAIN=i686-linux-android21-
-      ;;
-    x86_64)
-      EXTRA_BUILD_FLAGS="--force-target=x86_64-android-gcc --disable-sse2 --disable-sse3 --disable-ssse3 --disable-sse4_1 --disable-avx --disable-avx2 --enable-pic --disable-neon --disable-neon-asm"
-      VPX_AS=${TOOLCHAIN_PREFIX}/bin/yasm
-      TOOLCHAIN=x86_64-linux-android21-
       ;;
     *)
       echo "Unsupported architecture: $ABI"
@@ -183,17 +173,6 @@ function buildFfmpeg() {
       TOOLCHAIN=aarch64-linux-android21-
       CPU=armv8-a
       ARCH=aarch64
-      ;;
-    x86)
-      TOOLCHAIN=i686-linux-android21-
-      CPU=i686
-      ARCH=i686
-      EXTRA_BUILD_CONFIGURATION_FLAGS=--disable-asm
-      ;;
-    x86_64)
-      TOOLCHAIN=x86_64-linux-android21-
-      CPU=x86_64
-      ARCH=x86_64
       ;;
     *)
       echo "Unsupported architecture: $ABI"
