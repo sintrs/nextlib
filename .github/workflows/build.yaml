@@ -34,4 +34,16 @@ jobs:
       - uses: actions/upload-artifact@v4.6.2
         with:
           name: nextlib-release.aar
+          path: ./media3ext/build/outputs/aar/media3ext-release.aar
+
+      - uses: actions/upload-artifact@v4.6.2
+        with:
+          name: nextlib-release.aar
+          path: ./mediainfo/build/outputs/aar/mediainfo-release.aar
+
+      - uses: actions/upload-artifact@v4.6.2
+        with:
+          name: nextlib-release.aar
           path: ./ffcodecs/build/outputs/aar/ffcodecs-release.aar
+
+
