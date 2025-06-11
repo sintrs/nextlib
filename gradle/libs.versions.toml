@@ -6,8 +6,8 @@ androidxMedia3 = "1.7.1"
 checkerQual = "3.49.4"
 googleErrorProne = "2.38.0"
 androidxAnnotation = "1.9.1"
-cmake = "3.22.1"
-ndk = "25.2.9519653"
+cmake = "4.0.2"
+ndk = "28.1.13356709"
 mavenPublish = "0.32.0"
 
 [libraries]
